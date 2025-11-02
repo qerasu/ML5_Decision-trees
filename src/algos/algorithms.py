@@ -133,7 +133,7 @@ class _BaseTree: # Base tree with shared infrastructure
         # choose split
         if splitter == "best":
             split = self._find_best_split(idxs)
-        elif splitter == "random":
+        elif splitter == "random": # for ExtraTreesClassifier
             split = self._find_random_split(idxs, max_features=max_features, n_thresholds=n_thresholds)
         else:
             raise ValueError("splitter must be 'best' or 'random'.")
